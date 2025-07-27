@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Color Match Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Match Memory Game</h1>
+        <div class="start-screen" id="startScreen" style="display: flex; flex-direction: column;">
+            <div class="input-group">
+                <label for="playerName">Enter Your Name:</label>
+                <input type="text" id="playerName" placeholder="Your Name" maxlength="20" autocomplete="off"/>
+            </div>
+            <div class="input-group">
+                <label for="timeLimit">Set Time Limit (seconds, 10-300):</label>
+                <input type="number" id="timeLimit" placeholder="60" min="10" max="300" autocomplete="off"/>
+            </div>
+            <button id="startBtn" disabled>Start Game</button>
+        </div>
+        <div class="game-screen" id="gameScreen" style="display:none;">
+            <div class="name-display" id="displayName"></div>
+            <div class="scoreboard">
+                <div>Score: <span id="score">0</span></div>
+                <div>Time: <span id="timer">0</span>s</div>
+            </div>
+            <div class="message" id="message"></div>
+            <div class="grid" id="gameGrid"></div>
+            <div class="btn-group">
+                <button id="restartBtn">Restart</button>
+                <button id="exitBtn">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"> </script> 
+
+</body>
+</html>
